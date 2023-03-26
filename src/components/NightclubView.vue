@@ -3,8 +3,8 @@
       <!--Display nightclub infromation-->
       <div class="nightclub-listing">
         <div class="banner-container">
-          <img :src="`/img/nightclubs/${nightclub.BannerRef}`" class="nightclub-listing-banner" />
-          <img v-if="nightclub.IconRef" :src="`/img/nightclubs/${nightclub.IconRef}`" class="nightclub-listing-icon" />
+          <img :src="`../img/nightclubs/${nightclub.BannerRef}`" class="nightclub-listing-banner" />
+          <img v-if="nightclub.IconRef" :src="`../img/nightclubs/${nightclub.IconRef}`" class="nightclub-listing-icon" />
           
         </div>
         

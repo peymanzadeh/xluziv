@@ -3,7 +3,7 @@
     <div class="nightclubs">
       <div v-for="(nightclub, id) in nightclubs" :key="id" class="nightclub">
         <router-link :to="'/club/' + nightclub.id">
-          <img :src="`/img/nightclubs/${nightclub.IconRef}`" alt="Nightclub Icon" />
+          <img :src="`../img/nightclubs/${nightclub.IconRef}`" alt="Nightclub Icon" />
           <label>{{ nightclub.Name }}</label>
         </router-link>
       </div>
