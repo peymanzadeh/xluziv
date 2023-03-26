@@ -2,7 +2,7 @@
   <div class="component-body">
     <div class="events">
       <div v-for="(event, id) in events" :key="id" class="event">
-        <img :src="`../img/events/${event.IconRef}`" />
+        <img :src="`/img/events/${event.IconRef}`" />
       </div>
     </div>
   </div>
