@@ -41,9 +41,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  base: '/xluziv/', // Add this line to configure the base URL
+  history: createWebHistory(),
   routes,
-})
+});
 
 export default router
