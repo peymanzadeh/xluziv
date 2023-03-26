@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #1b1b1b;
+}
+
+/* App container */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1b1b1b;
+  color:#fff;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* mobile portrait */
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+/* mobile landscape */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+
+
+/* top bar */
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px 15px 10px;
+  background-color: #1b1b1b;
+  color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.top-menu {
+  display: flex;
+  align-items: center;
+}
+
+.top-menu i {
+  margin-left: 12px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* top menu */
+.top-menu-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* Common styles for menu items */
+.body-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1b1b;
+  border-top: 2px solid #333333;
+  border-bottom: 4px solid #bd00cb;
+  padding: 15px 0 15px 0;
+  font-size: 0.9em;
+}
+
+.body-menu li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 62px;
+}
+
+.body-menu li:last-child {
+  margin-right: 0;
+}
+
+.body-menu li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.body-menu li a:hover {
+  text-decoration: none;
+}
+
+.body-menu-icon {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+
+.body-menu-item {
+  color: #262626;
+  text-decoration: none;
+  padding-bottom: 28px;
+}
+
+.body-menu .body-menu-icon,
+.body-menu .body-menu-text {
+  opacity: 0.58;
+}
+
+
+.body-menu li.body-menu-active .body-menu-icon, 
+.body-menu li.body-menu-active .body-menu-text {
+  opacity:1;
+}
+
+
+@media screen and (max-width: 600px) {
+  .body-menu-text {
+    display:none;    
+  }
+
+  .body-menu-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+}
+  
+  
+
+/* Middle section */
+
+.component-body {
+  width:100%;
+}
+
+.middle {
+  flex-grow: 1;
+  background-color: #1b1b1b;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* bottom bar */
+.bottom {
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.24);
+}
+
+/* nightclubs */
+.nightclubs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  margin:15px;
+}
+
+.nightclub a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.nightclub img, .nightclub-listing-icon {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 0 0 4px #333333;
+}
+
+.nightclub label {
+  margin: 10px 0;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+
+.nightclub-listing {
+  height: 300px;
+  position: relative;
+  color:#fff;
+}
+
+
+
+
+.nightclub-listing-banner  {
+  /* the banner height should be constant, but the image should pan in and out accordingly */
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+
+.nightclub-listing-icon {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nightclub-listing-social {
+  /* center the icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #bd00cb;
+}
+
+.nightclub-listing-social img {
+  width:30px;
+  height:30px;
+  margin:20px 40px;;
+}
+
+
+.nightclub-name {
+  font-weight: 600;
+  justify-content: center;
+  display: flex;
+  margin:10px 0px 5px 0px;
+  font-size: 1.25em;
+}
+
+.nightclub-tagline {
+  justify-content: center;
+  display: flex;
+  margin:0px 0px 10px 0px;
+  font-size: 0.92em;
+}
+
+.nightclub-city, .nightclub-address {
+  /* center the icon and text together in relative position to above and below elements */
+  display: flex;
+  margin:0px 10px 10px 10px;
+  font-size: 0.92em;
+  align-items: center;
+}
+
+.nightclub-city img, .nightclub-address img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.nightclub-events
+{
+  margin-top:20px;
+  border-top: 2px solid #bd00cb;
+}
+
+.nightclub-no-events
+{
+  /* disply content in here in the center of the parent element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:40px 20px;
+  font-size: 0.92em;
+  text-align: center;
+  width:100%;
+}
+
+@media screen and (max-width: 480px) {
+  .nightclub-city, .nightclub-address {
+    font-size: 0.8em;
+    margin:0px 10px 5px 10px;
+  }
+  .nightclub-tagline {
+    font-size: 0.8em;
+  }
+}
+
+
+/* events list */
+.events {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-gap: 0px;
+  justify-content: center;
+}
+
+.event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event img {
+  width: 100%;
+  height: auto;
+  
+}
