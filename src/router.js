@@ -47,7 +47,8 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(process.env.BASE_URL),
   routes,
-  publicPath: '/xluziv/',
-})
+  publicPath: process.env.VUE_APP_PUBLIC_PATH || '/',
+});
+
 
 export default router
