@@ -18,19 +18,19 @@
     <div class="middle">
       
       <ul class="body-menu">
-        <li :class="{ 'body-menu-active': $route.path === '/clubs' }">
-          <router-link to="/clubs">
+        <li :class="{ 'body-menu-active': $route.path === '/clubs/' }">
+          <router-link to="/clubs/">
             <img src="./assets/icons8-disco-ball-48.png" alt="Nightclubs" class="body-menu-icon">
             <span class="body-menu-text">NIGHTCLUBS</span>
           </router-link>
         </li>
-        <li :class="{ 'body-menu-active': $route.path === '/events' }">
-          <router-link to="/events">
+        <li :class="{ 'body-menu-active': $route.path === '/events/' }">
+          <router-link to="/events/">
             <img src="./assets/icons8-calendar-48.png" alt="Events" class="body-menu-icon">
             <span class="body-menu-text">EVENTS</span></router-link>
           </li>
-        <li :class="{ 'body-menu-active': $route.path === '/rsvps' }">
-          <router-link to="/rsvps">
+        <li :class="{ 'body-menu-active': $route.path === '/rsvps/' }">
+          <router-link to="/rsvps/">
             <img src="./assets/icons8-today-48.png" alt="My RSVPs" class="body-menu-icon">
             <span class="body-menu-text">RSVPS</span>
           </router-link>
