@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from './components/HomeView.vue'
 import LoginView from './components/LoginView.vue'
 import NightclubList from './components/NightclubList.vue'
@@ -37,12 +37,17 @@ const routes = [
     name: 'NightclubView',
     component: NightclubView,
     props: true
+  },
+  {
+    path: '/:catchAll(.*)',
+    redirect: '/',
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes,
-});
+  base: '/xluziv/',
+})
 
 export default router
