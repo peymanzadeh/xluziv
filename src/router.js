@@ -9,26 +9,26 @@ import NightclubView from './components/NightclubView.vue'
 const routes = [
   {
     path: '/',
-    name: 'HomeView',
+    name: 'HomeView/',
     component: HomeView
   },
   {
-    path: '/login',
+    path: '/login/',
     name: 'LoginView',
     component: LoginView
   },
   {
-    path: '/clubs',
+    path: '/clubs/',
     name: 'NightclubList',
     component: NightclubList
   },
   {
-    path: '/events',
+    path: '/events/',
     name: 'EventsList',
     component: EventsList
   },
   {
-    path: '/rsvps',
+    path: '/rsvp/',
     name: 'RSVPList',
     component: RSVPList
   },
