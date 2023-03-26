@@ -3,8 +3,8 @@
       <!--Display nightclub infromation-->
       <div class="nightclub-listing">
         <div class="banner-container">
-          <img :src="`../img/nightclubs/${nightclub.BannerRef}`" class="nightclub-listing-banner" />
-          <img v-if="nightclub.IconRef" :src="`../img/nightclubs/${nightclub.IconRef}`" class="nightclub-listing-icon" />
+          <img :src="`${$router.options.publicPath}img/nightclubs/${nightclub.BannerRef}`" class="nightclub-listing-banner" />
+          <img v-if="nightclub.IconRef" :src="`${$router.options.publicPath}img/nightclubs/${nightclub.IconRef}`" class="nightclub-listing-icon" />
           
         </div>
         
@@ -32,7 +32,7 @@
       <!--Display events for nightclub-->
       <div class="events nightclub-events">
         <div v-for="(event, id) in events" :key="id" class="event">
-        <img :src="`../img/events/${event.IconRef}`" />
+        <img :src="`${$router.options.publicPath}img/events/${event.IconRef}`" />
       </div>
       </div> 
 
